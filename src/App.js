@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/react';
+
 import React, { useState, useEffect, useRef } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { Typography, Box, Container } from '@mui/material';
