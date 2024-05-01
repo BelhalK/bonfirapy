@@ -64,7 +64,7 @@ function App() {
 
 
         <Typography variant="h5" gutterBottom>
-          Do you want to purge?
+          Celebrating the end of a chapter?
         </Typography>
         <Box {...getRootProps({ className: 'dropzone' })} sx={{ border: '2px dashed grey.500' }}>
           <input {...getInputProps({ ref: inputRef })} />
