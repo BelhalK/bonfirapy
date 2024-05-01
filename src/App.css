@@ -1,38 +1,78 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  height: 100vh;  
+  min-height: 100vh;
+  width: 100vw;  /* Ensure the app doesn't exceed viewport width */
+  overflow-x: hidden;  /* Hide horizontal overflow */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;  
+  /* background-color: #282c34;   */
+  background: linear-gradient(135deg, #1b2735 0%, #090a0f 100%);
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100%;  
+  max-width: 600px;  
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Minimal CSS since MUI handles most styling */
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.fire-image {
+  width: 100%;  /* Full width of its container */
+  max-width: 300px;  /* Max width set for better control */
+  height: auto;  /* Maintain aspect ratio */
+  margin-top: 20px;
+}
+
+
+
+/* Add media queries for responsiveness */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 2.5rem;  
   }
-  to {
-    transform: rotate(360deg);
+
+  .content, .dropzone {
+    width: 90%; 
+  }
+
+  .fire-image {
+    width: 90%; 
   }
 }
+
+@media (max-width: 600px) {
+  .dropzone {
+    width: 90%;             /* Use more of the screen on small devices */
+    height: auto;           /* Flexible height based on content */
+  }
+
+  .fire-image {
+    width: 90%;             /* Make the image larger on smaller screens */
+    margin-top: 10px;       /* Less vertical space on smaller devices */
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+
